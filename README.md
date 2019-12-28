@@ -1,4 +1,4 @@
-# Domain-Generation-Alogithm-Detection
+# Domain Generation Algorithm (DGA) Detection
 The objective of this project is to experiment and select the best machine learning model to predict the domain names that are generated from DGAs and prevent the plausible cyber-attack.
 
 Refer to the "Steps to run the DGA application" pdf to run the DGA web application.	
