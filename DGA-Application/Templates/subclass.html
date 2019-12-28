@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DGA Detection</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+			<div id="brandname">
+				DGA Detection 
+			</div>
+			<h2> Identification of domains generated from Domain Generating Algorithms (DGAs)</h2>
+		
+		</div>
+	</header>
+	
+	<div class="container">
+		<form action="{{ url_for('predict_subclass')}}" method="POST">
+			<h2>Enter the URL Here</h2>
+			
+			<textarea name="url" rows="2" cols="50" placeholder="Enter the URL"></textarea>
+			<br/>
+			<br/>
+			<input name = "btn_subclass" type="submit" class="btn-info" value="Predict Subclass" style="color:white;">
+			<input name = "btn_BACK" type="submit" class="btn-info" value="Home" formaction = "/" style="color:white;">				
+		</form>		
+	</div>
+
+			
+	<div>		
+		{% if subclass_prediction == 'legit'%}
+		<h3 style="color:black;">This domain name belongs to the subclass LEGIT</h3>
+		{% elif subclass_prediction == 'newgoz'%}
+		<h3 style="color:black;">This domain name belongs to the subclass NEWGOZ</h3>
+		{% elif subclass_prediction == 'cryptolocker'%}
+		<h3 style="color:black;">This domain name belongs to the subclass CRYPTOLOCKER</h3>
+		{% elif subclass_prediction == 'goz'%}
+		<h3 style="color:black;">This domain name belongs to the subclass GOZ</h3>
+		{% elif subclass_prediction == 'invalid url'%}
+		<h3 style="color:black;">Please enter a valid URL!</h3>
+		{% endif %}
+	</div>
+	
+	
+	
+</body>
+</html>
