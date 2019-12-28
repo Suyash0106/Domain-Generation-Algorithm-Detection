@@ -4,7 +4,8 @@ Date: 12 December 2019
 Contact: 0470372165
 Email: suyash0106@outlook.com
 
-Summary: This is a web application for identification of domain names generated from Domain Generating Algorithms (DGAs). This web application is developed using Flask Framework which is used to integrate machine learning models into a web application.
+Summary: This is a web application for identification of domain names generated from Domain Generating Algorithms (DGAs). This web 
+	 application is developed using Flask Framework which is used to integrate machine learning models into a web application.
 """
 
 # Load the following set of libraries and packages
